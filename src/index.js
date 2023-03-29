@@ -1,3 +1,7 @@
+import Notiflix from 'notiflix';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const BASE_URL =
   'https://pixabay.com/api/?key=34843730-197a34e2a316a24279cec26df&${options}';
 
