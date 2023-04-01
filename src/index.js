@@ -15,8 +15,6 @@ async function getImages(query, page) {
   return response;
 }
 
-let simpleLightBox;
-
 const refs = {
   form: document.querySelector('.search-form'),
   input: document.querySelector('input'),
@@ -64,7 +62,7 @@ function createGallery(galleryItems) {
 }
 
 refs.form.addEventListener('submit', onformRef);
-
+let simpleLightBox;
 let query = '';
 let page = 1;
 
@@ -75,10 +73,10 @@ function onformRef(e) {
 
   query = refs.input.value.trim();
   refs.divGallery.innerHTML = '';
+  refs.buttonLoadMore.classList.add('hidden');
 
   if (query === '') {
     Notiflix.Notify.failure('Erorr, input is empty.');
-    refs.buttonLoadMore.classList.add('hidden');
     return;
   }
 
