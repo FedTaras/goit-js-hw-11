@@ -15,6 +15,8 @@ async function getImages(query, page) {
   return response;
 }
 
+let simpleLightBox;
+
 const refs = {
   form: document.querySelector('.search-form'),
   input: document.querySelector('input'),
