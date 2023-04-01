@@ -90,7 +90,10 @@ function onformRef(e) {
       } else {
         createGallery(data.hits);
 
-        simpleLightBox = new SimpleLightbox('.gallery a').refresh();
+        simpleLightBox = new SimpleLightbox('.gallery a', {
+          captionDelay: 250,
+        }).refresh();
+
         Notiflix.Notify.success(`Hooray! We found ${data.total} images.`);
 
         if (data.totalHits > 40) {
